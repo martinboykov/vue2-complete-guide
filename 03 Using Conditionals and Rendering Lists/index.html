@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="app">
+		<ul>
+			<!-- <li v-for="(ingredient,index) in ingredients" :key="index"> -->
+			<li v-for="(ingredient,index) in ingredients" v-bind:key="index">
+				{{index}} - {{ingredient}}
+			</li>
+		</ul>
+		<hr>
+		<template v-for="(person,index) in persons">
+			<h1>
+				{{index}}
+			</h1>
+			<span >{{person.name}}</span>
+		</template>
+		<ul v-for="(person,index) in persons">
+			<li v-for="(value,key,index) in person">{{index}} - {{key}} - {{value}}</li>
+		</ul>
+		<button @click="ingredients.push('spices')">add</button>
+		<span v-for="n in 10">{{n}}</span>
+	</div>
+	<script src="./app.js"></script>
+</body>
+
+</html>

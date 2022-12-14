@@ -221,21 +221,21 @@ export default {
 @keyframes slide-in {
   from {
     transform: translateY(20px);
-    /* opacity: 0; */
+    opacity: 0;
   }
   to {
     transform: translateY(0);
-    /* opacity: 1; */
+    opacity: 1;
   }
 }
 @keyframes slide-out {
   from {
     transform: translateY(0);
-    /* opacity: 1; */
+    opacity: 1;
   }
   to {
     transform: translateY(20px);
-    /* opacity: 0; */
+    opacity: 0;
   }
 }
 </style>
